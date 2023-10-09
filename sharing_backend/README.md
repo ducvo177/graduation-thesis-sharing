@@ -14,7 +14,7 @@ Clone mã nguồn ứng dụng: Mở cửa sổ dòng lệnh và điều hướn
 
 bash
 Copy code
-git clone https://github.com/laravel/laravel.git my-laravel-app
+git clone https://github.com/ducvo177/graduation-thesis-sharing.git
 Di chuyển vào thư mục ứng dụng: Chạy lệnh sau để di chuyển vào thư mục ứng dụng:
 
 bash
@@ -43,6 +43,10 @@ bash
 Copy code
 php artisan serve
 Truy cập ứng dụng: Mở trình duyệt web của bạn và truy cập địa chỉ sau: http://localhost:8000
+
+Nếu báo chưa có key app thì chạy câu lệnh
+
+php artisan key:generate
 
 Bạn đã hoàn thành! Bây giờ bạn có thể bắt đầu phát triển ứng dụng Laravel của mình. Hãy xem tài liệu chính thức của Laravel để tìm hiểu thêm về cách sử dụng và phát triển ứng dụng: https://laravel.com/docs
 
