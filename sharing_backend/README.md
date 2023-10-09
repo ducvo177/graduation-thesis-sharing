@@ -1,66 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Hướng dẫn bắt đầu với Laravel
+Cài đặt môi trường
+Cài đặt PHP: Đầu tiên, bạn cần cài đặt PHP trên máy tính của bạn. Bạn có thể tải phiên bản mới nhất từ trang web chính thức của PHP: https://www.php.net/
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Cài đặt Composer: Composer là một trình quản lý gói PHP phổ biến. Bạn có thể tải Composer từ trang web chính thức: https://getcomposer.org/
 
-## About Laravel
+Cài đặt Laravel Installer: Mở cửa sổ dòng lệnh và chạy câu lệnh sau để cài đặt Laravel Installer toàn cục:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+bash
+Copy code
+composer global require laravel/installer
+Clone và cấu hình ứng dụng Laravel
+Clone mã nguồn ứng dụng: Mở cửa sổ dòng lệnh và điều hướng đến thư mục bạn muốn lưu trữ mã nguồn của ứng dụng. Sau đó, chạy lệnh sau để clone mã nguồn từ kho lưu trữ:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+bash
+Copy code
+git clone https://github.com/laravel/laravel.git my-laravel-app
+Di chuyển vào thư mục ứng dụng: Chạy lệnh sau để di chuyển vào thư mục ứng dụng:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+bash
+Copy code
+cd my-laravel-app
+Tạo tệp .env: Laravel sử dụng tệp .env để cấu hình ứng dụng. Bạn cần tạo một bản sao của tệp .env.example và đặt các thông số cấu hình cho máy của bạn:
 
-## Learning Laravel
+bash
+Copy code
+cp .env.example .env
+Tạo khóa ứng dụng: Chạy lệnh sau để tạo khóa ứng dụng:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+bash
+Copy code
+php artisan key:generate
+Cài đặt các phụ thuộc
+Cài đặt các gói Composer: Chạy lệnh sau để cài đặt tất cả các gói Composer cần thiết cho ứng dụng Laravel:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+bash
+Copy code
+composer install
+Chạy ứng dụng
+Chạy máy chủ phát triển: Chạy lệnh sau để khởi động máy chủ phát triển của Laravel:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+bash
+Copy code
+php artisan serve
+Truy cập ứng dụng: Mở trình duyệt web của bạn và truy cập địa chỉ sau: http://localhost:8000
 
-## Laravel Sponsors
+Bạn đã hoàn thành! Bây giờ bạn có thể bắt đầu phát triển ứng dụng Laravel của mình. Hãy xem tài liệu chính thức của Laravel để tìm hiểu thêm về cách sử dụng và phát triển ứng dụng: https://laravel.com/docs
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Chúc bạn thành công trong việc học Laravel và phát triển ứng dụng của mình!
