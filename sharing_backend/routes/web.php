@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/login', 'Auth\LoginController@login');
+Route::post('/register', 'Auth\RegisterController@register');
+Route::middleware('auth:api')->group(function () {
+    Route::get('/user', 'UserController@user');
+    Route::post('/logout', 'Auth\LoginController@logout');
+});
