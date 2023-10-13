@@ -14,7 +14,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-            $token = $user->createToken('MyApp')->accessToken;
+            $token = $user->createToken('Accesstoken')->accessToken;
             return response()->json(['message' => 'Login successful', 'token' => $token, 'user' => $user]);
         } else {
             return response()->json(['message' => 'Login failed'], 401);
@@ -23,8 +23,9 @@ class LoginController extends Controller
 
     public function logout()
     {
-        $user = Auth::user();
-        $user->token()->revoke();
         return response()->json(['message' => 'Logout successful']);
+    }
+    public function index(){
+        return view('auth/login');
     }
 }
