@@ -6,7 +6,7 @@
                     <div class="card-header">Login</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('logout') }}">
+                        <form method="POST" action="{{ route('login') }}">
                             @csrf  <!-- Thêm CSRF token để bảo vệ mạng chống tấn công CSRF -->
 
                             <div class="form-group">

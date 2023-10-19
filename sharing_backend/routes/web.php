@@ -19,10 +19,9 @@ Route::get('/', function () {
 
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class,'login'])->name('login');
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('register');
+Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+Route::get('/login/index', [App\Http\Controllers\Auth\LoginController::class, 'index']);
 Route::middleware(['auth'])->group(function () {
     Route::get('/user',  [App\Http\Controllers\UserController::class, 'user'])->name('user');
-    Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 });
-Route::get('/login/index', [App\Http\Controllers\Auth\LoginController::class, 'index']);
-Route::post('/checkout-cart', [App\Http\Controllers\Backend\CartController::class, 'checkoutCart'])->name('checkout-cart')->middleware('auth');
 
